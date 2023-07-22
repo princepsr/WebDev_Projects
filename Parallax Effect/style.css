@@ -1,0 +1,104 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    box-sizing: border-box; /*size of box will remain fix and content will change*/
+}
+
+/*we need a wraper to put all the contents and scroll content within wrapper, we dont want to scroll the whole body
+ only content inside wrapper. Although this is same as body and weird but it is a required step for parallax effect*/
+#wrapper{
+    height: 100vh; /*by default width is max and height is less, define height otherwise content will overflow*/
+    overflow-x: hidden;/*removing it breaks 3d beahaviour*/
+    perspective: 10px; /* perspective is required to activate 3d transformation, give any value*/
+}
+
+.container{
+    /**/
+    position: relative; /*giving it a non static value so that we can use pos absolute for images*/
+    /*without giving it value relative we can use position absolute but here relative is important, remove to see effect*/
+    transform-style: preserve-3d;/*it preserves 3d behaviour from parent */
+    height: 100vh;
+    /* overflow: hidden; make overflow visible to see the 3d effect*/ 
+    /*giving overflow any value other than visible forces value of transform style to flat even if you you have preserve-3d*/
+    display: flex;
+    justify-content: center;
+    z-index: -1; /*this is necessary to make section at top and container in back to view contents of section clearly*/
+}
+
+.foreground,.background{
+    position: absolute; /*it will be taken from non static positioned parent element i.e, container*/
+    width: 100vw; /*giving values in viewport tomake it responsive*/
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1; /*for making heading to come up*/
+}
+
+.background{
+    transform: translateZ(-40px) scale(5); /*shifted img 5X far- distance b/w us & container 10px & b/w container and img 40px*/
+}
+
+.foreground{
+    transform: translateZ(-20px) scale(3);
+}
+
+h1 {
+    position: absolute;
+    top: 15%;
+    font-size: 5vw;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 5px 5px 5px black;
+}
+
+section {
+    background: rgb(26, 25, 25);
+    color: #fff;
+    padding: 4vw 0;
+}
+
+.heading{
+    font-size:4.5vw;
+    position: relative;
+    left:25vw;
+    color: #fff;
+    padding: 0 5px;
+    text-shadow: 5px 5px 3px rgb(82, 81, 81);
+}
+
+.text {
+    font-size: 1.8vw;
+    padding: 0 7vw;
+    margin: 4vw 0;
+    color: #fff;
+}
+
+.bg1{
+    background-image: url(image/sport1.jpg);
+}
+
+.bg2 {
+    background-image: url(image/sport2.jpg);
+}
+
+.bg3 {
+    background-image: url(image/sport3.jpg);
+}
+
+.bg{
+    background-size: cover;
+    background-position: center;
+    position: relative; /*giving it a non static value so that we can use pos absolute for child element -desc*/
+    height: 55vh;
+    background-attachment: fixed; /*used to fix background img*/
+}
+
+.desc{
+    position: absolute;
+    top:20%;
+    left:30vw;
+    font-size: 3vw;
+    background-color: #fff;
+    color: #000;
+}
