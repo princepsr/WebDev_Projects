@@ -1,0 +1,457 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative; /*used to give absolute position to child elements*/
+    width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px 0;
+}
+
+.sectionFluid {
+    position: relative;
+    display: block;
+}
+
+p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #fff;
+    margin: 0;
+}
+
+[type="radio"]{
+    display: none; /* removes element and space both while visibility hidden removes element only*/
+}
+
+.color-btn + label { /* + adjacent sibling selector, selects label just after color-btn*/
+    position: relative;
+    display: inline-block;/*it will enable size parameters for inline elements*/
+    height: 40px; /*changing size of labels*/
+    transition: all 400ms linear;
+    border-radius: 4px;
+    width: 40px;
+    cursor: pointer;
+    margin-right: 10px;
+    box-shadow: 0 12px 35px 2px rgba(16, 39, 112, 0.25);
+    z-index: 10;
+    background-position: center;
+    background-size: cover;
+    border: 3px solid transparent;
+}
+
+.color-btn:checked+label { /*giving border to label of checked button*/
+    border-color: #434343;
+    transform: scale(1.1);
+}
+
+.Color1{ /*bg to labels*/
+    margin-left: 500px;
+    background-image: url("./Images/color1.jpg");
+}
+.Color2 {
+    background-image: url("./Images/color2.jpg");
+}
+.Color3 {
+    background-image: url("./Images/color3.jpg");
+}
+.Color4 {
+    background-image: url("./Images/color4.jpg");
+}
+.Color5 {
+    background-image: url("./Images/color5.jpg");
+}
+.Color6 {
+    background-image: url("./Images/color6.jpg");
+}
+
+.imgWrap { /*Image container*/
+    display: inline-block;
+    height: 410px;
+    width: 500px;
+    background-image: url(./Images/chair1.png);
+    position: absolute;
+    top: 100px;
+    left: 0;
+    transition: all 600ms linear;
+    transition-delay: 100ms;
+    background-size: 100%;
+    z-index: 9;
+    opacity: 0;
+}
+
+
+/*see the diff b/w .forColor1:checked .imgwrap.Chair1 and .forColor1:checked~.imgwrap.Chair1 */
+.forColor1:checked~.imgWrap.chair1 { /* ~ general sibling selector - select all .chair1 after .forColor:checked*/
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.imgWrap.chair2 {
+    background-image: url("./Images/chair2.png");
+}
+
+.forColor2:checked ~.imgWrap.chair2 {
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.imgWrap.chair3 {
+    background-image: url("./Images/chair3.png");
+}
+
+.forColor3:checked~.imgWrap.chair3 {
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.imgWrap.chair4 {
+    background-image: url("./Images/chair4.png");
+}
+
+.forColor4:checked~.imgWrap.chair4 {
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.imgWrap.chair5 {
+    background-image: url("./Images/chair5.png");
+}
+
+.forColor5:checked~.imgWrap.chair5 {
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.imgWrap.chair6 {
+    background-image: url("./Images/chair6.png");
+}
+
+.forColor6:checked~.imgWrap.chair6 {
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translateX(-1px) rotate(-1deg);
+    }
+
+    20%,
+    80% {
+        transform: translateX(2px) rotate(2deg);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translateX(-3px) rotate(-3deg);
+    }
+
+    40%,
+    60% {
+        transform: translateX(3px) rotate(3deg);
+    }
+}
+
+.backColor { /*bg color for page*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 1;
+    background-image: linear-gradient(196deg, #9c5151, #e66767);
+    transition: all 400ms linear;
+    transition-delay: 300ms;
+}
+
+.backColor.chair2{
+    background: linear-gradient(196deg, #8a9fb2, #5f7991);
+    opacity: 0;
+}
+.forColor2:checked~.backColor.chair2 {
+    opacity:1;
+}
+
+.backColor.chair3 {
+    background: linear-gradient(196deg, #4c4c4c, #262626);
+    opacity: 0;
+}
+.forColor3:checked~.backColor.chair3 {
+    opacity: 1;
+}
+
+.backColor.chair4 {
+    background: linear-gradient(196deg, #97afc3, #6789a7);
+    opacity: 0;
+}
+.forColor4:checked~.backColor.chair4 {
+    opacity: 1;
+}
+
+.backColor.chair5 {
+    background: linear-gradient(196deg, #afa6a0, #8c7f76);
+    opacity: 0;
+}
+.forColor5:checked~.backColor.chair5 {
+    opacity: 1;
+}
+
+.backColor.chair6 {
+    background: linear-gradient(196deg, #7d8481, #6c7170);
+    opacity: 0;
+}
+.forColor6:checked~.backColor.chair6 {
+    opacity: 1;
+}
+
+.infoWrap {
+    position: relative;
+    margin-left: 500px;
+    z-index: 10;
+    display: block;
+    text-align: left;
+}
+
+.titleUp {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    line-height: 1.2;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 1.2;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.2;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+h4 span {
+    text-decoration: line-through;
+    font-size: 20px;
+    opacity: 0.6;
+    padding-left: 15px;
+}
+
+h5 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.descBtn+label { /*label of description and detail button*/
+    position: relative;
+    transition: all 400ms linear;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    color: #ffeba7;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #fff;
+    margin-right: 25px;
+    opacity: 0.5;
+}
+
+.descBtn:checked+label {
+    opacity: 1;
+}
+
+.descBtn:not(:checked)+label:hover {
+    opacity: 0.8;
+}
+
+.descSec {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    transition: all 400ms linear;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transform: translateY(20px);
+    color: #fff;
+}
+
+.descSec.accor2 { /*sets properties on details section*/
+    position: absolute; /*to overlap with description section*/
+    top: 25px;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+#desc1:checked~.descSec.accor1 {/*checked by default*/
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0); /*sliding effect to chair desc*/
+}
+
+#desc2:checked~.descSec.accor2 { /*making it visible if label is checked by increasing opacity to 1*/
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.sectionInline { /*sets properties on details section*/
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.sectionInline p span { /*sets properties on details section*/
+    font-size: 30px;
+    line-height: 1.1;
+}
+
+.btn { /*add to cart button*/
+    position: relative;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 2;
+    height: 48px;
+    border-radius: 4px;
+    width: 210px;
+    letter-spacing: 1px;
+    display: inline-flex; /*this makes flex an inline element*/
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    box-shadow: 0 6px 15px 0 rgba(16, 39, 112, 0.15);
+    transition: all 400ms linear;
+    text-decoration: none;
+    margin-top: 50px;
+}
+
+#btn:hover{ /*used id here to increase the specificity otherwise (.forColor1: checked~.infoWrap .btn) this 
+    will not let hover work since we are applying bg-color twice so rule with higher specificity works */
+    box-shadow: 0 12px 35px 0 rgba(16, 39, 112, 0.25);
+    background-color: #333;
+}
+
+.forColor1:checked~.infoWrap .btn {
+    background-color: #9b4550;
+}
+
+.forColor2:checked~.infoWrap .btn{
+    background-color: #40566e;
+}
+
+.forColor3:checked~.infoWrap .btn {
+    background-color: #1a1a1a;
+}
+
+.forColor4:checked~.infoWrap .btn {
+    background-color: #5e89b2;
+}
+
+.forColor5:checked~.infoWrap .btn {
+    background-color: #8c7f76;
+}
+
+.forColor6:checked~.infoWrap .btn {
+    background-color: #5d6160;
+}
+
+@media screen and (max-width:991px){
+    .container{
+        margin: 0 auto;
+        text-align: center;
+        max-width: calc(100%-40px);
+        width:370px;
+    }
+    label.Color1{
+        margin-left: 0;
+    }
+    .infoWrap{
+        margin-left: 0;
+        width: 370px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .imgWrap{
+        top: 50px;
+        width: 375px;
+        height: 308px;
+        left: 50%;
+        margin-left: -190px;
+    }
+    .mobMargin{
+        margin-top: 250px;
+    }
+    .descBtn + label{
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    .color-btn+label{
+        height: 40px;
+        width: 40px;
+        margin: 5px auto;
+        text-align: center;
+    }
+    .sectionInline{
+        margin: 0 5px;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .container {
+        width: 280px;
+    }
+    .imgWrap {
+        top:20px;
+        width: 275px;
+        height: 208px;
+        left: 50%;
+        margin-left: -130px;
+    }
+    .infoWrap {
+        margin-left: 0;
+        width: 280px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .mobMargin {
+        margin-top: 140px;
+    }
+    .sectionInline p span{
+        font-size: 24px;
+        line-height: 1.1;
+    }
+    .sectionInline p{
+        font-size: 14px;
+    }
+    .sectionFluid{
+        height: 150px;
+    }
+}
