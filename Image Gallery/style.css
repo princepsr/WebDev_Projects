@@ -26,7 +26,7 @@ h2{
 
 .item{
     border-radius: 10px;
-    filter: grayscale(100%); /*this makes .item act as containing block for pos:absolute for figcaption*/
+    filter: grayscale(100%);
     overflow: hidden;
     /* filter dropshadow and filter grayscale dont work together dropshadow auto removes grayscale effect */
     box-shadow: 3px 3px 3px gray;
@@ -47,7 +47,7 @@ img{
 }
 
 figcaption{
-    position:absolute; /*not given .item pos:rel still it is relative to .item bcz of filter, see MDN pos:absolute*/
+    position:absolute;
     bottom: 0;
     padding-bottom: 3px;
     padding-left: 5px;
