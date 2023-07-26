@@ -51,14 +51,14 @@ figcaption{
     bottom: 0;
     padding-bottom: 3px;
     padding-left: 5px;
-    opacity: 0;
+    opacity: 0; 
     color: white;
     font-weight: 500;
     text-align: center;
 }
 
 .item:hover figcaption{ /*effects figcaption when item gets hovered*/
-    opacity: 1;
+    opacity: 1; /*will not be visible untill it gets hovered*/
     width:100%;
     background: linear-gradient(to top,rgba(0, 0, 0, 1), rgba(67, 64, 64, 0.1));
 }
