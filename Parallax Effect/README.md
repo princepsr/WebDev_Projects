@@ -1,6 +1,7 @@
 
-<h1>3D Parallax Effect createdusing CSS</h1>
-
+<h1>3D Parallax Effect created using CSS</h1>
+<p>Click Below Link to see Deployment ⬇ </p>
+Github Pages Link : <a href="https://princepsr.github.io/WebDev_Projects/Parallax Effect" target="_blank"> Parallax Effect</a>
 
 ### Header &darr;
 <img src="image/readme/Header.png" alt="header" width="100%" height="auto" />
