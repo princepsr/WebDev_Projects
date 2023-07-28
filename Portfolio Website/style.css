@@ -1,0 +1,571 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{ /*contains nav and header section*/
+    width: 1200px;
+    margin: 0 auto;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img{
+    width: 80px;
+}
+
+.logo-container p{
+    font-size: 28px;
+}
+
+.nav-items a{
+    font-size: 20px;
+    padding: 0 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;/*for removing underline*/
+}
+
+.nav-items a:hover{
+    font-weight: bold;
+    transition: 0.8s;
+}
+
+header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap:5rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+}
+
+.header-left{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.header-left .name{
+    font-size: 35px;
+    color: #343d68;
+    font-weight: 500;
+}
+
+.header-left .heading{
+    font-size: 45px;
+    color:#343d68;
+    font-weight: 500;
+    line-height: 45px;
+}
+
+.header-left .role{
+    font-weight: 800;
+    color:#4e45d5
+}
+
+.header-left .description{
+    margin-top: 1rem;
+    width:70%;
+    font-weight: 500;
+}
+
+.btn {
+    background-color: #e84949;
+    width: -moz-fit-content; /*for firefox support*/
+    width: fit-content;
+    color: white;
+    padding: 0.8rem 2.3rem;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 500;
+    border: solid 3px transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+}
+
+.btn:hover::before {
+    transform: scaleX(1);
+}
+
+.btn:hover {
+    border: solid 3px #e84949;
+    color: black;
+}
+
+.faded-text {
+    -webkit-user-select: none; /*this is for Safari Browser*/
+    user-select: none; /*it disables text selection*/
+    font-size: 7em;
+    color: rgb(231, 231, 231);
+    position: absolute;
+    bottom: -16%;
+    left: -4%;
+    font-weight: bold;
+    transition: all 3s;
+}
+
+.header-right{
+    position: relative; /*to position icon images on user image*/
+}
+
+.header-right .user-image{
+    padding: 2.5rem;
+    filter: grayscale(1);
+    transition: all 1s;
+    animation: scaleImage 5s linear infinite;
+    z-index: -1;/*to make image icons visible*/
+    position: relative;/*necessary to work z index*/
+}
+
+@keyframes scaleImage {
+    0%{
+        filter: grayscale(0);
+        transform: scale(0.9);
+        box-shadow: 3px 3px 10px black;
+    }
+    50%{
+        filter: grayscale(1);
+        transform: scale(1);
+        box-shadow: none;
+    }
+    100%{
+        filter: grayscale(0);
+        transform: scale(0.9);
+        box-shadow: 3px 3px 10px black;
+    }
+}
+
+.icon-dot{
+    position: absolute;
+    bottom:-1rem;
+    right: 0;
+    animation: dot-animation 5s infinite;
+}
+
+@keyframes dot-animation {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.icon-cube{
+    position: absolute;
+    top:-0.8rem;
+    right: 1em;
+    animation: cube-animation 3s infinite;
+}
+
+@keyframes cube-animation {
+    0% {
+        transform: translateY(0px) rotateY(0deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotateY(180deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotateY(360deg);
+    }
+}
+
+.icon-circle{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    animation: circle-animation 6s linear infinite;
+}
+
+@keyframes circle-animation {
+    50%{
+        left: 5%;
+        bottom: 10%;
+    }
+}
+
+.icon-zigzag{
+    position: absolute;
+    top: 1.5em;
+    left: -0.3em;
+    animation: zigzag-animation 5s ease-in infinite;
+}
+
+@keyframes zigzag-animation {
+    50%{
+        left: 5%;
+        top: 2%;
+    }
+}
+
+.icon-plus{
+    position: absolute;
+    top: -0.8em;
+    left: 50%;
+    animation: plus-animation 5s ease-in infinite;
+}
+
+@keyframes plus-animation{
+    50%{
+        top:3%;
+        left: 48%;
+    }
+}
+
+/*projects section starts here*/
+.projects{
+    background-color: rgb(231, 231, 231);
+    margin-top: 4rem;
+}
+
+.projects h2{
+    color:#e84949;
+    font-size: 90px;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+#project1 {
+    margin-left: 120px;
+    background-image: url(./image/projects/Project1.png);
+    background-size: cover;/*covers size of parent*/
+}
+
+#project2 {
+    margin-right: 120px;
+    background-image: url(./image/projects/Project2.png);
+    background-size: cover;
+}
+
+#project3 {
+    margin-left: 120px;
+    background-image: url(./image/projects/Project3.png);
+    background-size: cover;
+}
+
+#project4 {
+    margin-right: 120px;
+    background-image: url(./image/projects/Project4.png);
+    background-size: cover;
+}
+
+.cards-container{
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;/*between cards*/
+}
+
+.project-card{
+    width: 90%;
+    height:550px;
+    box-shadow: 0px 0px 40px #1f1f1f;
+    position: relative;
+}
+
+.project-card::after{ /*to create a blackish tint on card- this container comes on top of card to give effect*/
+    content: "";/*dont want any content after project card*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; /*to make it overlap with original card*/
+    background-color: #1f1f1f9a; /*bg color with decreased opacity gives blackish color to card*/
+}
+
+.project-card::before{/*to give sliding effect*/
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(45deg,#343d68,#343d68be,#343d687c);
+    transform: scaleX(0);/*to amke it invisible in start and slide after hover*/
+    transform-origin: left;
+    transition: all 0.4s;
+    z-index: 1; /*before container is on top then after and then project card*/
+}
+
+.project-card:hover::before{ /*before and after containers run on top of element not behind which makes effect visible*/
+    transform: scaleX(1);
+}
+
+.project-number{
+    position: absolute;
+    font-size: 200px;
+    font-weight: 600;
+    color: white;
+    z-index: 1;
+    opacity: 0;
+}
+
+.project-card:hover .project-number{/*change opacity of project-number when project card gets hovered*/
+    opacity: 1;
+}
+
+.number-right{ /*positioning number right wrt card*/
+    top: -45px;
+    right: -40px;
+}
+
+.number-left{ /*positioning number left wrt card*/
+    top: -45px;
+    left: -40px;
+}
+
+.project-content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    color:white;
+    padding:2em;
+    bottom: 20%;
+    gap: 1em;
+    transition: all 0.4s;
+    z-index: 1;
+}
+
+.content-left{/*for setting project content position*/
+    left: 10%;
+}
+
+.content-right{
+    right: 10%;
+}
+
+.project-skills-container{
+    display:flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-skill{
+    width: 40px;
+}
+
+.project-heading{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3rem;
+}
+
+.project-description{
+    font-size: 16px;
+    font-style: italic;
+}
+
+.icon{
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+    padding-left:10px;
+}
+
+.icon:hover{
+    color:#e84949;
+    transition: all 0.4s;
+}
+
+.project-card:hover .project-content{
+    transform: scale(1.1); /*scaling project-content when project-card gets heovered*/
+}
+
+/*skills section starts here*/
+
+.skills{
+    position: relative;
+    display: flex;
+    margin: 10rem auto;
+    margin-bottom: 3rem;
+    gap: 30px;
+}
+
+.skills-left{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.skills-right{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    position: relative;
+    gap:2rem;
+}
+
+.skills-heading{
+    font-size: 50px;
+    font-style: bold;
+    color:#e84949;
+    line-height: 50px;
+}
+
+.caps{
+     font-size: 90px;
+}
+
+.skills-subheading{
+    margin-top: 1rem;
+    width: 85%;
+    text-align: justify;
+}
+
+.blob-style{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: blob 3s linear infinite;
+}
+
+@keyframes blob {
+    50%{
+        top: 54%;
+        left: 46%;
+    }
+}
+
+.skills-logo {
+    width: 90px;
+    transition: all 0.5s;
+    z-index: 1;
+}
+
+.skills-logo:hover {
+    transform: scale(1.1);
+}
+
+/*Contact section starts here*/
+
+.contact{
+    background-color: rgb(231, 231, 231);
+}
+
+.contact-heading{
+    font-size: 5em;
+    color:#e84949;
+    padding-top: 5rem;
+}
+
+.contact-subheading{
+     font-size: 3rem;
+     color:#343d68aa;
+}
+
+.contact-form{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 70%;
+    margin: 2em 5em;
+}
+
+.form-field{
+    height:42px;
+    padding: 0 2rem;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: 500;
+    box-shadow: 2px 2px 10px #0000003f;
+    border: none;
+}
+
+.form textarea{
+    height: auto;
+    padding-top: 1rem;
+}
+
+.submit-icon{
+    padding: 0 1rem;
+    font-size: 1.2rem;
+}
+
+/*footer section starts here*/
+footer {
+    margin-top: -1px;
+    background-color: #343d68;
+    padding: 5rem 0;
+    position: relative;
+}
+
+.footer-container{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-container .faded-text{ /*positioning a/c to footer*/
+    font-size: 2em;
+    bottom: 0%;
+    left: 0%;
+}
+
+.footer-left a{
+    padding:1rem;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: all 0.6s;
+}
+
+.footer-left a:hover{
+    color:#e84949;
+}
+
+.footer-right i{
+    padding: 1rem;
+}
