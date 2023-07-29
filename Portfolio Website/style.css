@@ -569,3 +569,292 @@ footer {
 .footer-right i{
     padding: 1rem;
 }
+
+/*media queries added for responsiveness*/
+
+@media (max-width:1050px) { 
+    .container{
+        width: 85vw;
+    }
+
+    .skills-logo {
+        width: 60px;
+    }
+}
+
+@media (max-width:800px) {
+    nav {
+        padding: 0.5rem;
+    }
+
+    .logo-container img {
+        width: 40px;
+    }
+
+    .logo-container p {
+        font-size: 20px;
+    }
+
+    .nav-items a {
+        font-size: 18px;
+        padding: 0 1rem;
+    }
+
+    header {
+        gap: 2rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        padding-bottom: 3rem;
+    }
+
+    .header-left {
+        gap: 1rem;
+    }
+
+    .header-left .name {
+        font-size: 20px;
+    }
+
+    .header-left .heading {
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .header-left .description {
+        margin-top: 0.5rem;
+        width:270px;
+    }
+
+    .faded-text {
+        font-size: 4em;
+    }
+
+    .btn{
+        transform: scale(0.8);
+    }
+
+    .header-right{
+        transform: scale(0.7);
+    }
+
+    .projects h2 {
+        font-size: 50px;
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+    
+    #project1,#project3 {
+        margin-left: 60px;
+    }
+
+    .project-card {
+        height: 350px;
+    }
+
+    .project-number {
+        font-size: 100px;
+    }
+
+    .project-skills-container {
+        gap: 6px;
+    }
+    
+    .project-skill {
+        width: 25px;
+    }
+
+    .project-heading {
+        font-size: 30px;
+        line-height: 2rem;
+    }
+
+    .project-description {
+        font-size: 14px;
+    }
+    
+    .btn-container{
+        transform: scale(0.7);
+        margin-left:-20%;
+    }
+
+    .project-content {
+        bottom: 15%;
+        width:60%;
+    }
+
+    .skills {
+        margin: 4rem auto;
+        margin-bottom: 4rem;
+        gap: 30px;
+    }
+
+    .skills-logo {
+        width: 50px;
+    }
+    
+    .contact-heading{
+        font-size: 3em;
+    }
+
+    .contact-subheading{
+        font-size: 2rem;
+    }
+    
+    footer {
+        padding: 3rem 0;
+    }
+
+    .footer-container{
+        margin: 0;
+        width:100%;
+    }
+
+}
+
+@media (orientation:portrait) {
+    nav {
+        padding: 0.5rem 0;
+    }
+
+    .logo-container p {
+        font-size: 16px;
+    }
+
+    .nav-items a {
+        font-size: 13px;
+        padding: 0 0.5rem;
+    }
+
+    header {
+        padding: 2rem 0;
+        flex-direction: column;
+    }
+
+    .header-left .name {
+        font-size: 16px;
+    }
+
+    .header-left .heading {
+        font-size: 15px;
+        line-height: 15px;
+    }
+
+    .header-left .description {
+        font-size: 15px;
+        width: 100%;
+    }
+
+    .faded-text {
+        font-size: 2em;
+    }
+
+    .btn {
+        transform: scale(0.6);
+        margin:-5%;
+    }
+
+    .header-right {
+        display: none;
+    }
+
+    .projects{
+        margin: 30px 0;
+    }
+    .projects h2 {
+        font-size: 40px;
+    }
+
+    #project1,
+    #project3,#project4,#project2 {
+        margin: 0px;
+    }
+
+    .cards-container{
+        padding: 0;
+        width: 90%;
+        gap: 30px;
+    }
+
+    .project-card {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .project-number {
+        font-size: 40px;
+    }
+
+    .project-skills-container {
+        gap: 4px;
+    }
+
+    .project-skill {
+        width: 20px;
+    }
+
+    .project-heading {
+        font-size: 18px;
+        line-height: 1rem;
+    }
+
+    .project-description {
+        font-size: 12px;
+    }
+
+    .project-number{
+        display: none;
+    }
+
+    .btn-container {
+        transform: scale(0.5);
+        margin-left: -40%;
+    }
+
+    .project-content {
+        bottom: 5%;
+        width: 80%;
+    }
+
+    .skills {
+        margin-bottom: 4rem;
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    .skills-left,.skills-right{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .skills-logo {
+        width: 50px;
+    }
+
+    .skills-left .faded-text{
+        display: none;
+    }
+
+    .contact-heading {
+        font-size: 2em;
+        padding: 0;
+        text-align: center;
+    }
+
+    .contact-subheading {
+        padding-top: 5px;
+        font-size: 1rem;
+    }
+
+    .form{
+        margin-top: -5%;
+        gap: 10px;
+    }
+
+    .form textarea{
+        height: 100px;
+    }
+
+    footer {
+        display: none;
+    }
+}
