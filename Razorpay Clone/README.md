@@ -1,7 +1,7 @@
 <h1>Portfolio Website using Tailwind CSS</h1>
 <p>Click Below Link to see Deployment ⬇ </p>
 
-Github Pages Link : <a href="https://princepsr.github.io/WebDev_Projects/Razorpay Clone" target="_blank">Razorpay Clone</a>
+Github Pages Link : <a href="https://princepsr.github.io/WebDev_Projects/Razorpay Clone/dist" target="_blank">Razorpay Clone</a>
 
 ### Hero Section &darr;
 <img src="image/readme/Hero.png" alt="Hero Section" width="100%" height="auto" />
