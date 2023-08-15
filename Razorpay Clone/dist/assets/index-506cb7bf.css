@@ -1105,31 +1105,31 @@ video {
 }
 
 .bg-\[url\(\.\/image\/CTABg\.svg\)\] {
-    background-image: url(./assets/CTABg-7965a2ac.svg)
+    background-image: url(./CTABg-7965a2ac.svg)
 }
 
 .bg-\[url\(\.\/image\/core-features-sectionBg\.svg\)\] {
-    background-image: url(./assets/core-features-sectionBg-aa7b9844.svg)
+    background-image: url(./core-features-sectionBg-aa7b9844.svg)
 }
 
 .bg-\[url\(\.\/image\/feature-section-2BG\.svg\)\] {
-    background-image: url(./assets/feature-section-2BG-f5684ac1.svg)
+    background-image: url(./feature-section-2BG-f5684ac1.svg)
 }
 
 .bg-\[url\(\.\/image\/instant-settlement-bg\.svg\)\] {
-    background-image: url(./assets/instant-settlement-bg-b641c370.svg)
+    background-image: url(./instant-settlement-bg-b641c370.svg)
 }
 
 .bg-\[url\(\.\/image\/payment-button-bg\.svg\)\] {
-    background-image: url(./assets/payment-button-bg-15467863.svg)
+    background-image: url(./payment-button-bg-15467863.svg)
 }
 
 .bg-\[url\(\.\/image\/qr-codes-bg\.svg\)\] {
-    background-image: url(./assets/qr-codes-bg-9236c278.svg)
+    background-image: url(./qr-codes-bg-9236c278.svg)
 }
 
 .bg-\[url\(\.\/image\/upi-autopay-bg\.svg\)\] {
-    background-image: url(./assets/upi-autopay-bg-669a2ca0.svg)
+    background-image: url(./upi-autopay-bg-669a2ca0.svg)
 }
 
 .bg-cover {
@@ -1532,7 +1532,7 @@ video {
 }
 
 .hover\:bg-\[url\(\.\/\)\]:hover {
-    background-image: url(./assets/index-ae4fceb1.html)
+    background-image: url(./index-ae4fceb1.html)
 }
 
 .hover\:text-grayBlue:hover {
@@ -1636,7 +1636,7 @@ video {
 }
 
 .featureCard:hover .featureCardBox {
-    background-image: url(./assets/features-wave-06991790.svg);
+    background-image: url(./features-wave-06991790.svg);
     background-repeat: no-repeat;
     background-position: bottom 1rem right
 }
@@ -1653,7 +1653,7 @@ video {
 }
 
 .featureCard2:hover .featureCardBox {
-    background-image: url(./assets/features2-wave-bb06068d.svg);
+    background-image: url(./features2-wave-bb06068d.svg);
     background-repeat: no-repeat;
     background-position: bottom 1rem right
 }
