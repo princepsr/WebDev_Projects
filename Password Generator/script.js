@@ -138,6 +138,8 @@ function generateSymbol() {
 }
 
 let password = "";
+
+//getelement by class name gives array of elements of that class,thats why we using generateBtn[0] for 1st element
 generateBtn[0].addEventListener('click',()=>{
     
     // none of the checkboxes are selected
