@@ -1,3 +1,7 @@
+How to setup the React App?
+1. Install necessary node packages by running npm install
+2. Run npm start to start the server
+
 <h1>Tourism Planner using ReactJS</h1>
 <p>Click Below Link to see Deployment ⬇ </p>
 
