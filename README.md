@@ -14,3 +14,5 @@
 5. <a href="./Razorpay Clone">Razorpay Clone</a> &nbsp; using <b>HTML, Tailwind</b> &nbsp; see live website <a href="https://princepsr.github.io/WebDev_Projects/Razorpay%20Clone/dist">Razorpay Clone Live</a> </br>
 
 6. <a href="./Password Generator">Password Generator</a> &nbsp; using <b>HTML, CSS, JS</b> &nbsp; see live website <a href="https://princepsr.github.io/WebDev_Projects/Password%20Generator">Password Generator Live</a> </br>
+
+7. <a href="./Tourism Planner">Tourism Planner</a> &nbsp; using <b>ReactJS</b> &nbsp; see live website <a href="https://princepsr.github.io/WebDev_Projects/Tourism%20Planner/build">Tourism Planner Live</a> </br>
